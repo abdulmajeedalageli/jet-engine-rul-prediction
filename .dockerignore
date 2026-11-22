@@ -1,0 +1,7 @@
+# Send Docker only what the image needs; everything else (data, .venv, outputs, notebook, .git) stays out.
+*
+!requirements.txt
+!api.py
+!src/
+!models/
+**/__pycache__

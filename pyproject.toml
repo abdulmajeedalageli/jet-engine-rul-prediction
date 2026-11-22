@@ -1,0 +1,8 @@
+[tool.pytest.ini_options]
+pythonpath = ["."]   # so tests can `import src` without installing the project
+addopts = "-m 'not slow'"   # a normal run skips slow tests; `pytest -m slow` runs them
+markers = ["slow: takes minutes (the full NASA skew test); run with pytest -m slow"]
+
+[tool.ruff]
+line-length = 120                 # the code's existing style; the default 88 would rewrap imports
+extend-exclude = ["notebooks"]    # the notebook is the untouched source of truth, not linted
